@@ -1,3 +1,44 @@
+.dash-card-content h3 a, .dash-card-content h3 a:active, .dash-card-content h3 a:hover {
+    color: <?= $vars['theme']['hover']; ?>;
+}
+
+.wizard-body a, .wizard-body a:active, .wizard-body a:hover, wizard-body a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.footer a, .footer a:active, .footer a:hover, .footer a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.form-container a, .form-container a:active, .form-container a:hover, .form-container a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.content-2col a, .content-2col a:active, .content-2col a:hover, .content-2col a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.pagination > .active > span {
+    background-color: <?= $vars['theme']['primary']; ?> !important;
+    border-color: <?= $vars['theme']['primary']; ?> !important;
+}
+
+.pagination a {
+    color: <?= $vars['theme']['primary']; ?> !important;
+}
+
+.search-results a, .search-results a:active, .search-results a:hover, .search-results a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.note-editor a, .note-editor a:active, .note-editor a:hover, .note-editor a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.dropdown-menu a, .dropdown-menu a:active, .dropdown-menu a:hover, .dropdown-menu a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
 .navbar-default {
     background-color: <?= $vars['theme']['primary']; ?>;
     border-color: #e7e7e7;
@@ -9,16 +50,13 @@
     background-color: <?= $vars['theme']['hover']; ?>;
 }
 
-
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background-color: <?= $vars['theme']['hover']; ?>;
+    color: <?= $vars['theme']['primary']; ?>;
+    background-color: <?= $vars['theme']['secondary']; ?>;
 }
 
-.navbar-default .navbar-nav > li > a:hover {
-    background-color: <?= $vars['theme']['hover']; ?>;
-}
-
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: <?= $vars['theme']['secondary']; ?>;
     background-color: <?= $vars['theme']['hover']; ?>;
 }
 
@@ -27,9 +65,26 @@
     color: <?= $vars['theme']['primary']; ?>;
 }
 
+.sidebar-menu a {
+    color: <?= $vars['theme']['primary']; ?> !important;
+}
+
 .sidebar-menu .active a, .sidebar-menu .active .glyphicon {
     color: <?= $vars['theme']['primary']; ?> !important;
     background-color: <?= $vars['theme']['secondary']; ?>;
+}
+
+.sidebar-menu-toggle.active {
+    background-color: <?= $vars['theme']['primary']; ?> !important;
+    border-color: <?= $vars['theme']['primary']; ?> !important;
+}
+
+.sidebar-buttons a:hover {
+    color: <?= $vars['theme']['hover']; ?>;
+}
+
+.dropdown-menu .glyphicon {
+    color: <?= $vars['theme']['primary']; ?> !important;
 }
 
 .section-heading {
@@ -37,16 +92,60 @@
     color: <?= $vars['theme']['hover']; ?>;
 }
 
+.panel-heading {
+    background-color: <?= $vars['theme']['secondary']; ?> !important;
+}
+
 .btn-primary {
     color: #fff;
-    background-color: <?= $vars['theme']['primary']; ?>;
-    border-color: <?= $vars['theme']['primary']; ?>;
+    background-color: <?= $vars['theme']['primary']; ?> !important;
+    border-color: <?= $vars['theme']['primary']; ?> !important;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: <?= $vars['theme']['secondary']; ?>;
+    border-color: <?= $vars['theme']['secondary']; ?>;
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: <?= $vars['theme']['hover']; ?>;
     border-color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn-bordered {
+    color: <?= $vars['theme']['primary']; ?>;
+    background-color: <?= $vars['theme']['secondary']; ?>;
+    border-color: <?= $vars['theme']['primary']; ?>;
+}
+
+.btn-bordered:active {
+    color: <?= $vars['theme']['hover']; ?>;
+    background-color: <?= $vars['theme']['secondary']; ?>;
+    border-color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn-bordered:hover {
+    color: <?= $vars['theme']['hover']; ?>;
+    background-color: <?= $vars['theme']['secondary']; ?>;
+    border-color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn-link {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.btn-link:active {
+    color: <?= $vars['theme']['secondary']; ?>;
+}
+
+.btn-link:hover {
+    color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn-trans:hover, .btn-trans:focus {
+    color: <?= $vars['theme']['hover']; ?>;
 }
 
 .table-conversations thead {
