@@ -201,6 +201,11 @@
     border-color: <?= $vars['theme']['hover']; ?>;
 }
 
+.btn-primary[disabled]:hover, .note-editor .btn-primary[disabled]:hover {
+    background-color: <?= $vars['theme']['hover']; ?>;
+    border-color: <?= $vars['theme']['hover']; ?>;
+}
+
 .btn-bordered {
     color: <?= $vars['theme']['primary']; ?>;
 }
