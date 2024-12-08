@@ -22,6 +22,7 @@
  *     .note-editing-area                  - Popup when creating saved replies
  *     .wizard-body                        - Popup when creating new user, new mailbox
  *     .kb-category-content                - Knowledge Base content
+ *     .kb-ref-table-container             - Links when inserting a KB reference
  *     .footer                             - Page footer with FreeScout version linked to system info
  */
 
@@ -35,6 +36,7 @@
 .note-editing-area a,
 .wizard-body a,
 .kb-category-content a,
+.kb-ref-table-container a,
 .footer a {
     color: <?= $vars['theme']['primary']; ?>;
 }
@@ -45,6 +47,7 @@
 .note-editing-area a:active,
 .wizard-body a:active,
 .kb-category-content a:active,
+.kb-ref-table-container a:active,
 .footer a:active {
     color: <?= $vars['theme']['secondary']; ?>;
 }
@@ -55,6 +58,7 @@
 .note-editing-area a:hover,
 .wizard-body a:hover,
 .kb-category-content a:hover,
+.kb-ref-table-container a:hover,
 .footer a:hover {
     color: <?= $vars['theme']['hover']; ?>;
 }
@@ -65,6 +69,7 @@
 .note-editing-area a:focus,
 .wizard-body a:focus,
 .kb-category-content a:focus,
+.kb-ref-table-container a:focus,
 .footer a:focus {
     color: <?= $vars['theme']['primary']; ?>;
 }
