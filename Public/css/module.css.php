@@ -1,22 +1,94 @@
-.dash-card-content h3 a, .dash-card-content h3 a:active, .dash-card-content h3 a:hover {
+/*
+ * Generic UI elements (button, radio button, checkbox, switch etc.)
+ */
+
+* {
+    accent-color: <?= $vars['theme']['primary']; ?>;
+}
+
+.magic-checkbox:checked+label:before {
+    background-color: <?= $vars['theme']['primary']; ?>;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+    background-color: <?= $vars['theme']['primary']; ?>;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label, .onoffswitch-checkbox:checked + .onoffswitch-label:before {
+    border-color: <?= $vars['theme']['primary']; ?>;
+}
+
+/*
+ * Various link colors of content containers
+ *     .dash-card-content h3               - Mailbox title on tile of main page
+ *     .content-2col                       - Right-sided content container with conversations, lists and more; exceptions for text in dropdown menus and icons
+ *     .customer-contacts .contact-main    - Customer contact in right pane of conversations and left pane of profiles
+ *     .note-editing-area                  - Popup when creating saved replies
+ *     .wizard-body                        - Popup when creating new user, new mailbox
+ *     .kb-category-content                - Knowledge Base content
+ *     .kb-ref-table-container             - Links when inserting a KB reference
+ *     .footer                             - Page footer with FreeScout version linked to system info
+ */
+
+.dash-card-content h3 a {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.dash-card-content h3 a,
+.content-2col a:not(.glyphicon, .dropdown-menu li a),
+.customer-contacts .contact-main,
+.note-editing-area a,
+.wizard-body a,
+.kb-category-content a,
+.kb-ref-table-container a,
+.footer a {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.dash-card-content h3 a:active,
+.content-2col a:active,
+.customer-contacts .contact-main:hover a:active,
+.note-editing-area a:active,
+.wizard-body a:active,
+.kb-category-content a:active,
+.kb-ref-table-container a:active,
+.footer a:active {
+    color: <?= $vars['theme']['secondary']; ?>;
+}
+
+.dash-card-content h3 a:hover,
+.content-2col a:hover,
+.customer-contacts .contact-main:hover,
+.note-editing-area a:hover,
+.wizard-body a:hover,
+.kb-category-content a:hover,
+.kb-ref-table-container a:hover,
+.footer a:hover {
     color: <?= $vars['theme']['hover']; ?>;
 }
 
-.wizard-body a, .wizard-body a:active, .wizard-body a:hover, wizard-body a:focus {
+.dash-card-content h3 a:focus,
+.content-2col a:focus,
+.customer-contacts .contact-main:focus,
+.note-editing-area a:focus,
+.wizard-body a:focus,
+.kb-category-content a:focus,
+.kb-ref-table-container a:focus,
+.footer a:focus {
     color: <?= $vars['theme']['primary']; ?>;
 }
 
-.footer a, .footer a:active, .footer a:hover, .footer a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
+/*
+ * Selected tags in dropdown menu of conversation toolbar
+ */
+
+.select2-results__option--highlighted {
+    background-color: <?= $vars['theme']['primary']; ?> !important;
 }
 
-.form-container a, .form-container a:active, .form-container a:hover, .form-container a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
-}
-
-.content-2col a, .content-2col a:active, .content-2col a:hover, .content-2col a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
-}
+/*
+ * Jump marks to previous / next pages, e.g. for user log records
+ */
 
 .pagination > .active > span {
     background-color: <?= $vars['theme']['primary']; ?> !important;
@@ -27,24 +99,15 @@
     color: <?= $vars['theme']['primary']; ?> !important;
 }
 
-.search-results a, .search-results a:active, .search-results a:hover, .search-results a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
-}
-
-.note-editor a, .note-editor a:active, .note-editor a:hover, .note-editor a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
-}
-
-.dropdown-menu a, .dropdown-menu a:active, .dropdown-menu a:hover, .dropdown-menu a:focus {
-    color: <?= $vars['theme']['primary']; ?>;
-}
+/*
+ * Navigation bar
+ */
 
 .navbar-default {
     background-color: <?= $vars['theme']['primary']; ?>;
     border-color: #e7e7e7;
 }
 
-/* Logo */
 .navbar-default .navbar-brand:hover {
     color: #5e5e5e;
     background-color: <?= $vars['theme']['hover']; ?>;
@@ -60,10 +123,26 @@
     background-color: <?= $vars['theme']['hover']; ?>;
 }
 
+/*
+ * Dropdown menus, e.g. Mailbox / Manage menu, web notifications, search menu
+ */
+
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
     background-color: <?= $vars['theme']['secondary']; ?>;
     color: <?= $vars['theme']['primary']; ?>;
 }
+
+.dropdown-menu a, .dropdown-menu a:active, .dropdown-menu a:hover, .dropdown-menu a:focus {
+    color: <?= $vars['theme']['primary']; ?>;
+}
+
+.dropdown-menu .glyphicon {
+    color: <?= $vars['theme']['primary']; ?> !important;
+}
+
+/*
+ * Sidebar menus, e.g. mailbox folders
+ */
 
 .sidebar-menu a {
     color: <?= $vars['theme']['primary']; ?> !important;
@@ -83,52 +162,61 @@
     color: <?= $vars['theme']['hover']; ?>;
 }
 
-.dropdown-menu .glyphicon {
-    color: <?= $vars['theme']['primary']; ?> !important;
-}
+/*
+ * Section headers in content container, e.g. subtitles of "Settings"
+ */
 
 .section-heading {
     background-color: <?= $vars['theme']['secondary']; ?>;
     color: <?= $vars['theme']['hover']; ?>;
 }
 
+/*
+ * Editor's menu bar
+ */
+
 .panel-heading {
     background-color: <?= $vars['theme']['secondary']; ?> !important;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: <?= $vars['theme']['primary']; ?> !important;
-    border-color: <?= $vars['theme']['primary']; ?> !important;
+/*
+ * Various buttons
+ */
+
+.btn-primary, .note-editor .btn-primary {
+    color: #fff !important;
+    background-color: <?= $vars['theme']['primary']; ?>;
+    border-color: <?= $vars['theme']['primary']; ?>;
 }
 
-.btn-primary:active {
+.btn-primary:active, .note-editor .btn-primary:active {
     color: #fff;
-    background-color: <?= $vars['theme']['secondary']; ?>;
-    border-color: <?= $vars['theme']['secondary']; ?>;
+    background-color: <?= $vars['theme']['secondary']; ?> !important;
+    border-color: <?= $vars['theme']['secondary']; ?> !important;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .note-editor .btn-primary:hover {
     color: #fff;
+    background-color: <?= $vars['theme']['hover']; ?>;
+    border-color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn-primary[disabled]:hover, .note-editor .btn-primary[disabled]:hover {
     background-color: <?= $vars['theme']['hover']; ?>;
     border-color: <?= $vars['theme']['hover']; ?>;
 }
 
 .btn-bordered {
     color: <?= $vars['theme']['primary']; ?>;
-    background-color: <?= $vars['theme']['secondary']; ?>;
-    border-color: <?= $vars['theme']['primary']; ?>;
 }
 
 .btn-bordered:active {
-    color: <?= $vars['theme']['hover']; ?>;
-    background-color: <?= $vars['theme']['secondary']; ?>;
-    border-color: <?= $vars['theme']['hover']; ?>;
+    color: <?= $vars['theme']['secondary']; ?>;
 }
 
 .btn-bordered:hover {
     color: <?= $vars['theme']['hover']; ?>;
-    background-color: <?= $vars['theme']['secondary']; ?>;
+    background-color: transparent;
     border-color: <?= $vars['theme']['hover']; ?>;
 }
 
@@ -146,6 +234,10 @@
 
 .btn-trans:hover, .btn-trans:focus {
     color: <?= $vars['theme']['hover']; ?>;
+}
+
+.btn:focus, btn:active:focus {
+    outline-style: none;
 }
 
 .table-conversations thead {
@@ -179,6 +271,9 @@
     background-color: <?= $vars['theme']['secondary']; ?>;
 }
 
+/*
+ * Module-specific CSS for Themes
+ */
 
 .theme-colours .btn {
 	margin-right: 5px;
