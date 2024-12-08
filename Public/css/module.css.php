@@ -6,6 +6,10 @@
     accent-color: <?= $vars['theme']['primary']; ?>;
 }
 
+.magic-checkbox:checked+label:before {
+    background-color: <?= $vars['theme']['primary']; ?>;
+}
+
 .onoffswitch-checkbox:checked + .onoffswitch-label {
     background-color: <?= $vars['theme']['primary']; ?>;
 }
